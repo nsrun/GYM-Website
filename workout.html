@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GYM | Workouts</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -16,6 +16,7 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="workout.html">Workouts</a></li>
+            <li><a href="plans.html">Plans</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="social-links">
@@ -30,28 +31,28 @@
         <h2 style="font-size: 3rem; text-align: center; margin-bottom: 50px; color: var(--primary-color);">Our Training Programs</h2>
         <div class="workout-grid">
             <div class="workout-card">
-                <img src="https://images.unsplash.com/photo-1581009146145-b5ef03a7403f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Bodybuilding">
+                <img src="assets/img/bodybliding.png" alt="Bodybuilding">
                 <h3>Bodybuilding</h3>
                 <p>Focus on muscle growth and definition with our specialized strength training programs.</p>
                 <br>
                 <a href="#" class="btn">Learn More</a>
             </div>
             <div class="workout-card">
-                <img src="https://images.unsplash.com/photo-1518611012118-2961720d302a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Yoga">
+                <img src="assets/img/yoga.png" alt="Yoga">
                 <h3>Yoga & Mobility</h3>
                 <p>Improve flexibility and reduce stress with our expert-led yoga and stretching classes.</p>
                 <br>
                 <a href="#" class="btn">Learn More</a>
             </div>
             <div class="workout-card">
-                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cardio">
+                <img src="assets/img/workout.jpg" alt="Cardio">
                 <h3>Cardio Blitz</h3>
                 <p>Burn calories and improve your cardiovascular health with high-intensity cardio sessions.</p>
                 <br>
                 <a href="#" class="btn">Learn More</a>
             </div>
             <div class="workout-card">
-                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Crossfit">
+                <img src="assets/img/gym.png" alt="Crossfit">
                 <h3>Crossfit</h3>
                 <p>A high-intensity fitness program incorporating elements from several sports and types of exercise.</p>
                 <br>
@@ -60,12 +61,65 @@
         </div>
     </section>
 
+    <!-- BMI CALCULATOR SECTION -->
+    <section class="bmi-section">
+        <h2 style="font-size: 3rem; color: var(--primary-color);">Calculate Your BMI</h2>
+        <p>Know your Body Mass Index (BMI) to better understand your fitness goals.</p>
+        <div class="bmi-container">
+            <div class="bmi-form">
+                <div class="bmi-inputs">
+                    <input type="number" id="weight" placeholder="Weight (kg)" required>
+                    <input type="number" id="height" placeholder="Height (cm)" required>
+                </div>
+                <button class="btn" onclick="calculateBMI()">Calculate Now</button>
+                <div id="bmi-result" class="bmi-result">
+                    <p>Your BMI is: <span id="bmi-value" class="bmi-value">0</span></p>
+                    <p id="bmi-status" style="margin-top: 10px;"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function calculateBMI() {
+            const weight = document.getElementById('weight').value;
+            const height = document.getElementById('height').value;
+            const resultDiv = document.getElementById('bmi-result');
+            const bmiValueSpan = document.getElementById('bmi-value');
+            const bmiStatusP = document.getElementById('bmi-status');
+
+            if (weight && height) {
+                const bmi = (weight / ((height / 100) * (height / 100))).toFixed(1);
+                bmiValueSpan.innerText = bmi;
+                resultDiv.style.display = 'block';
+
+                let status = '';
+                if (bmi < 18.5) {
+                    status = 'Underweight';
+                    bmiStatusP.style.color = '#ffcc00';
+                } else if (bmi >= 18.5 && bmi < 24.9) {
+                    status = 'Healthy weight';
+                    bmiStatusP.style.color = '#00ff00';
+                } else if (bmi >= 25 && bmi < 29.9) {
+                    status = 'Overweight';
+                    bmiStatusP.style.color = '#ff9900';
+                } else {
+                    status = 'Obese';
+                    bmiStatusP.style.color = '#ff3300';
+                }
+                bmiStatusP.innerText = `Status: ${status}`;
+            } else {
+                alert('Please enter both weight and height.');
+            }
+        }
+    </script>
+
     <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <div class="footer-col">
                 <h3>GYMFLEX</h3>
-                <p>Empowering your fitness journey since 2020. Join our community and transform your life today.</p>
+                <p>Empowering your fitness journey since 2025. Join our community and transform your life today.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -79,6 +133,7 @@
                     <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="workout.html">Workouts</a></li>
+                    <li><a href="plans.html">Plans</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
