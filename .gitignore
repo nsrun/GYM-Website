@@ -1,0 +1,20 @@
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Python files (if any)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Others
+node_modules/
+dist/
+build/
