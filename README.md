@@ -1,70 +1,85 @@
-# GYMFLEX - Modern Fitness Website
+# GYMFLEX - Premium Modern Fitness Website
 
-GYMFLEX is a professional, high-impact gym website designed with a modern dark theme and orange accents. It features a fully responsive layout and a clean, user-friendly interface tailored for fitness enthusiasts and gym owners.
+GYMFLEX is a comprehensive, multi-page fitness platform designed for modern gym facilities. It features a high-energy **Sky Blue** and **Dark** theme, providing a professional and motivating digital experience for fitness enthusiasts.
 
 ## 🚀 Key Features
 
-- **Modern UI/UX**: High-contrast dark theme with vibrant orange highlights (`#ff4500`) for a high-energy, professional fitness feel.
-- **Fully Responsive**: Seamlessly transitions between desktop, tablet, and mobile devices using CSS Flexbox and Grid.
-- **Multi-Page Experience**:
-    - **Home**: Dynamic hero section with a clear Call-to-Action (CTA), key service highlights (Modern Equipment, Expert Trainers, 24/7 Access), and an about-us preview.
-    - **About**: Detailed mission statement, core values (Community, Excellence, Improvement), and the story behind GYMFLEX.
-    - **Workouts**: A grid-based training program showcase featuring Bodybuilding, Yoga, Cardio, and Crossfit with detailed descriptions.
-    - **Contact**: A clean, interactive contact form with integrated location markers, phone/email contact info, and social media connectivity.
-- **Advanced Footer**: A professional 4-column layout containing brand identity, quick navigation links, real-time working hours, and full contact details.
-- **Interactive Elements**: Smooth CSS transitions, hover animations on buttons and navigation links, and integrated Font Awesome iconography.
+### 1. High-Impact Landing Page
+- **Dynamic Hero Section**: Engaging visuals with clear Call-to-Action (CTA) buttons.
+- **Expert Trainers**: Dedicated profiles for certified professionals with social connectivity.
+- **Member Testimonials**: Integrated social proof to build community trust.
+- **Quick BMI Tool**: Access the Body Mass Index calculator directly from the home page.
 
-## 🛠️ Technical Stack
+### 2. Specialized Pages
+- **About Us**: Detailed mission statement, core values, and an interactive **FAQ section** with smooth toggle animations.
+- **Workouts**: A showcase of training programs (Bodybuilding, Yoga, Cardio, Crossfit) with specialized descriptions.
+- **Membership Plans**: A professional three-tier pricing model (Basic, Pro, Elite) with detailed feature lists and Indian Rupee (₹) currency support.
+- **Contact Hub**: Interactive form, real-time working hours, and physical location details.
 
-- **HTML5**: Semantic markup for accessibility and SEO.
-- **CSS3**: Custom styles using variables (`:root`), Flexbox, and CSS Grid for complex layouts without heavy frameworks.
-- **Typography**: Optimized with 'Poppins' and 'Segoe UI' for a clean, modern look.
-- **Icons**: High-quality SVG icons via Font Awesome 6.0.0.
+### 3. Advanced Utilities
+- **Interactive BMI Calculator**: A custom-built JavaScript tool that calculates BMI and provides health status feedback (Underweight, Healthy, Overweight, Obese).
+- **Responsive Navigation**: A sticky header with smooth hover effects and a standardized footer across all pages.
+
+## 🛠️ Technical Implementation
+
+- **Architecture**: Organized asset structure using an `assets/` directory for clean codebase management.
+- **Frontend**: 
+  - **HTML5**: Semantic elements for better SEO and accessibility.
+  - **CSS3**: Custom variables (`:root`) for easy theme management, CSS Grid, and Flexbox for ultra-responsive layouts.
+  - **JavaScript**: Lightweight, vanilla JS for interactive elements (BMI Calculator, FAQ Toggles).
+- **Design Assets**:
+  - **Typography**: Optimized with Google Fonts (Poppins).
+  - **Iconography**: Font Awesome 6.0.0 for high-resolution vector icons.
+  - **Theme**: Customizable primary color (`#87ceeb`) for consistent branding.
 
 ## 📁 Project Structure
 
 ```bash
 GYM/
-├── home.html         # Main entry point & landing page
-├── about.html        # Company mission & values page
-├── workout.html      # Training programs & classes page
-├── contact.html      # Get in touch & location page
-├── style.css         # Centralized stylesheet for all pages
-├── .gitignore        # Git configuration to ignore system files
-└── README.md         # Detailed project documentation
+├── assets/
+│   ├── css/
+│   │   └── style.css       # Centralized modern stylesheet
+│   └── img/
+│       ├── gym.png         # Main branding & interior assets
+│       ├── workout.jpg     # Professional training visuals
+│       ├── trainer1.png    # Expert profile assets
+│       └── trainer2.jpg    # Expert profile assets
+├── home.html               # Main landing & entry point
+├── about.html              # Mission, Values & FAQ
+├── workout.html            # Programs & BMI Utility
+├── plans.html              # Membership pricing tiers
+├── contact.html            # Contact & Location details
+├── .gitignore              # Git configuration
+└── README.md               # Professional documentation
 ```
 
-## 💻 Installation & Usage
+## 💻 Installation & Local Development
 
-1. **Clone the Repository**:
+1. **Clone the Project**:
    ```bash
    git clone https://github.com/nsrun/GYM-Website.git
    ```
-2. **Navigate to the Directory**:
-   ```bash
-   cd GYM-Website
-   ```
-3. **Launch the Website**:
-   - Simply double-click `home.html` to open it in your default browser.
-   - **Recommended**: Run a local development server for the best experience:
+2. **Setup**:
+   Ensure all files are in the correct directory structure as shown above.
+3. **Run**:
+   - For the best experience, run via a local server:
      ```bash
-     # Using Python
      python -m http.server 8000
      ```
-     Then visit `http://localhost:8000/home.html` in your browser.
+   - Access at `http://localhost:8000/home.html`
 
-## 🤝 Contributing
+## 🤝 Contribution Guidelines
 
-Contributions are welcome! If you have suggestions for improvements or want to add new features:
-1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the Branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+We value community feedback! To contribute:
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/NewFeature`).
+3. Commit your changes (`git commit -m 'Add NewFeature'`).
+4. Push to the branch (`git push origin feature/NewFeature`).
+5. Open a Pull Request for review.
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+This project is licensed under the MIT License - providing freedom for personal and commercial use.
 
 ---
-**Developed with ❤️ by [nsrun](https://github.com/nsrun)**
+**Crafted with excellence by [nsrun](https://github.com/nsrun)**
